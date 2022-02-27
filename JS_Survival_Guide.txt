@@ -283,3 +283,16 @@ Local and Session Storage
 - sessionStorage has the same functions/getters/setters as localStorage, 
 - the only difference is the persistence that local storage provides over session storage
 - once we quit the browser, sessionStorage is https://www.youtube.com/watch?v=xc0LQveanOk
+
+--21--
+Editable Div : Exercise 2
+Quite a quick, but fun and insightful exercise :)
+
+--22--
+Magic Notes App
+Features
+- Add a note by writing text and pressing Add Note Button. This will add your note text to localStorage notes array and run render logic
+- Delete a note by clicking delete button. Delete is handled by id which is nothing but the index of the note in notes array passed down by render logic
+- Render logic fetches notes from localStorage and produces card html using template literals and injects the html in the DOM
+- Search sets the display to block if note text includes a substring otherwise it sets it to none
+

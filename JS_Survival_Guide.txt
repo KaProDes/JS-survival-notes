@@ -1,0 +1,236 @@
+--1--
+Brief installation and how to use
+
+--2--
+console
+  - .time and .timeEnd -> to check execution time of program
+  - .log
+  - .error
+  - .warn
+  - .info
+  - .table -> for JSON objects table print
+  - .assert(condition,statement_if_condition_fails)
+
+comments
+  - single and multiline
+
+--3--
+var
+  - usage, mutability and global scope
+const
+  - usage, partial-mutability and block level scoped
+  - arrays that are const support push, pop but no redeclaration
+  - You have to declare AND assign
+let
+  - usage, multability and block level scoped
+
+*Avoid using $foo (Jquery like) and _foo (private member like) for ordinary variables
+
+Cases
+  - camelCase
+  - PascalCase
+  - snake_case
+  - kebab-case
+
+--4--
+Primitive Datatypes
+- number, string, symbol, null, undefined
+- stored on stack
+
+Reference Data Types
+- arrays, objects, functions, Dates
+- stored in heap
+
+typeof operator to check datatypes (try for all datatypes)
+
+datatype | typeof
+number number
+string string
+symbol symbol
+null object
+undefined undefined
+array  object
+object object
+date object
+function function
+
+Symbols are freaking weird amirite?
+
+--5--
+Type conversion (like typecasting)
+- Number() String() Date() are type converters
+- number to string, date to string, array to string
+- .toString() also helps with string conversion
+
+- Similarly, Number() converts any datatype to number
+- If conversion is not possible we will get NaN
+- true and false to Number() will give 1 and 0 respectively
+- array to number will also give NaN
+- parseInt(), parseFloat() are used to get Int and Float values respectively
+- .toFixed(x) will fix the decimal points up to x decimal places after .
+
+Type coersion (like auto typecasting)
+- "698" + 34 gives "69834"
+- Number("698") + 34 gives 732
+
+--6--
+Strings
+- str.concat(str1)
+- str.length
+- str.toLowerCase()
+- str.toUpperCase()
+- str[index]
+- str.indexOf('xyz')
+- str.lastIndexOf('xyz')
+- str.charAt(index)
+- str.endsWith('xyz')
+- str.includes('xyz')
+- str.substring(startIndex, endIndex+1)
+- str.slice(-x) -> last x chars
+- str.slice(0,4) -> first 3 chars
+- str.split(' ')
+- str.replace('xyz','abc')
+
+Template Literals
+- Their ease of use
+- Making multiline Literals
+
+
+--7--
+Arrays
+- arr.length property
+- using Array() constructor to create an array
+- Array.isArray(arr) to check if array
+- arr.indexOf(element)
+
+- Most array operations are inplace
+
+- arr.push(x)
+- arr.pop()
+- arr.unshift(x)
+- arr.shift()
+- arr.splice(start,end+1)
+- arr.reverse()
+- arr.concat(arr2)
+- Array.from(a) -> converts a collection to an iterable array
+
+- Array operations which are inplace and do not require reassignment will work on const type arrays perfectly fine
+
+Objects
+- Defining objects' keys and values
+- Accessing values using keys using the obj.propname operator and obj['propname'] notation
+
+--8--
+
+- if else if else in JS
+- == vs ===
+- null and undefined as falsey
+- assigned values as truthy
+
+- ternery operator
+
+- switch statement structure in JS + break
+
+--9--
+
+- for while and do-while loops
+- break pass and continue
+- for each loop over arrays (element, index, array) as args
+- for key in obj to iterate over objects
+
+--10--
+Functions
+- traditional functions in JS
+- args and return type
+- arrow functions in JS
+- packing functions withing an object
+
+Scopes
+- global and block level(function scope) using var, let
+- var has a global scope while let, const has a block level scope
+- Investigate more on this - try some examples and MCQs
+
+--11--
+DOM
+- window
+  - window is treated a global object. So window.alert() is same as alert()
+  - alert()
+  - prompt()
+  - confirm()
+  - window.document or document
+  - window.innerHeight or innerHeight
+  - window.innerWidth or innerWidth
+  - window.scrollX and window.scrollY
+  - window.location or location used to reload page and change href of the page
+    - location.reload()
+    - location.href 
+    - location.href = 'https://foobar.com'
+    - location.toString()
+  - window.history or history holds the entire history
+    - history.go(1) -> goes 1 step back in history (back button)
+
+--12--
+document
+- document.all -> all tags as html collection (not an array)
+- document.body -> body of the document
+- document.forms -> all forms present in the doc
+- document.links -> all links present in the doc
+- NOTE : If we get html collection, we can convert them to an array by using Array.from(collection_name)
+- document.images -> all images present in the doc
+- document.scripts -> all scripts present in the doc
+
+--13--
+Exercise 1
+Given that you have opened the console on a webpage
+Write a script that will print all links which contain the word 'python'
+
+--14--
+Selectors
+- single element selectors
+- getElementById()
+- querySelector() #id and .class
+
+Multi element selectors
+- getElementsByClassName()
+- querySelectorAll() #id and .class
+- getElementsByTagName()
+
+Traversals and Properties
+- element.className
+- element.parentNode
+- element.childNodes
+- element.style.color and other such CSS properties 
+- element.innerText and element.innerHTML
+- iterate and changing properties using selectors and array.forEach
+
+--15--
+Child, Parent and Travesing DOM
+- element.childNodes vs element.children
+- nodeName and nodeType
+- nodeTypes - Element, attribute, textNode, Comment, Document and docType
+- element.firstChild and element.firstElementChild
+- element.lastChild and element.lastElementChild
+- childElementCount vs childNodes.length
+- element.parentNode
+- element.nextElementSibling vs element.nextSibling
+
+--16--
+Create, Remove and Replace elements
+- document.createElement('htmlTagName')
+- element.className = 'foo'
+- element.id = 'foo'
+- document.createTextNode('lorem text')
+- element.appendChild(element1)
+
+- element.replaceWith(element1)
+- element.replaceChild(newElement, oldElement)
+- element.removeChild(childElement)
+
+- element.getAttribute('attributeName')
+- element.hasAttribute('attributeName')
+- element.setAttribute('attributeName','attributeValue')
+- element.removeAttribute('attributeName')
+
+- Quick quiz at the very end
+
+--17--

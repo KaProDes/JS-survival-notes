@@ -296,3 +296,43 @@ Features
 - Render logic fetches notes from localStorage and produces card html using template literals and injects the html in the DOM
 - Search sets the display to block if note text includes a substring otherwise it sets it to none
 
+--23--
+Math object in JS
+- console.log(Math) to see all available Functions
+- Math.PI and Math.E for constants
+- Math.round() Math.ceil() Math.floor()
+- Math.abs()
+- Math.sqrt() Math.pow()
+- Math.min() Math.max()
+- Math.random() gives random between 0 and 1 which can be offsetted, scaled and integerized using floor
+
+- There are many more functions in Math, please explore
+
+--24--
+Date(s) in JS
+- new Date() gives current date-time
+- new Date('8-4-2003 04:54:08') and new Date('June 13 1976') and new Date('09/16/1976') are ways to create a date
+- date.getDate() -> day
+- date.getMonth() -> month
+- date.getFullYear() -> fullyear
+- date.getTime() -> Time since 1st Jan 1970
+- date.getMilliseconds()
+- date.getHours() / getMinutes() / getSeconds()
+- date.setDate(x) / date.setMonth(y) / date.setFullYear(z)
+- date.setHours(x) / date.setMinutes(y) / date.setSeconds(z)
+
+--25--
+Solution to Exercise 2
+- node.appendChild(x)
+- node.prependChild(x)
+- node.insertBefore(x)
+- node.insertAfter(x)
+- 'click' and 'blur' events
+
+--26--
+Exercise 3
+- Add a title field as well in the magic notes app
+- easy (store notes as a JS array of objects in localStorage)
+
+--27--
+

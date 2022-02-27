@@ -234,3 +234,52 @@ Create, Remove and Replace elements
 - Quick quiz at the very end
 
 --17--
+Event and Event Object
+- element.addEventListener(event,callbackFunction(e)=>{...})
+- e parameter represents the event object
+- e.target
+- e.target.className
+- Array.from(e.target.classList)
+- e.target.id
+- e.target.value
+- e.offsetX
+- e.offsetY
+- e.clientX
+- e.clientY
+
+--18--
+- e.preventDefault()
+- click
+- dblclick
+- mousedown
+- mouseup
+- mousemove
+- mouseleave
+- mousenter
+- tracking movement of offsetX and offsetY of mouse and setting RGB colors of div
+
+--19--
+Solutions to exercise 1 mentioned in section --13--
+
+--20--
+Local and Session Storage
+- local storage stays persistent until browser is reset/updated/cleared
+- session storage stays persistent until the browser task is active
+
+- items are stored as key-value pairs in localStorage
+
+- window.localStorage to see the entire local storage key-values
+- localStorage.setItem('keyName','valValue')
+- localStorage.getItem('keyName') or localStorage['keyName'] or localStorage.keyName
+- localStorage.removeItem('keyName') to nuke an item
+- localStorage.clear() to nuke the entire localStorage
+
+- By default arrays cannot be stored in localStorage, but we can use a workaround
+  - However we can perform stringArr = JSON.stringify(arr) to convert array to string and then store stringArr
+  - While retriving the stringified array, perform arr = JSON.parse(stringArr) and get back arr
+
+- Every website has its own localStorage independent from others
+
+- sessionStorage has the same functions/getters/setters as localStorage, 
+- the only difference is the persistence that local storage provides over session storage
+- once we quit the browser, sessionStorage is https://www.youtube.com/watch?v=xc0LQveanOk

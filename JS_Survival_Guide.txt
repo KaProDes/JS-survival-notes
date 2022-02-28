@@ -20,7 +20,8 @@ var
 const
   - usage, partial-mutability and block level scoped
   - arrays that are const support push, pop but no redeclaration
-  - You have to declare AND assign
+  - objects declared as const allow their attriibutes to change but prevent redeclaration
+  - You have to declare AND assign immediately
 let
   - usage, multability and block level scoped
 
@@ -335,4 +336,35 @@ Exercise 3
 - easy (store notes as a JS array of objects in localStorage)
 
 --27--
+OOP
+- Object Literals (Non OOP stuff, kinda)
+- Functional Constructor and use of this keyword
+- new keyword while instantiating a new object with a Functional constructor
+- Why even bother with constructors (and OOP) - maintainability angle
 
+
+--28--
+Object Prototype
+- __proto__ is the baseline "class" from which a particular object is created
+- if we define our own constructor Obj(...){} and create a new obj using Obj then
+  obj uses __proto__ Obj and Obj itself uses the __proto__ Object which is present in JS engine
+- The above concept is called prototype chaining 
+- Once a constructor, say MyObj is defined for a class, its own __proto__ comes into existence
+  We can modify the constructor MyObj by writing MyObj.prototype.someAttribute = ...
+- [WARN] : You can modify JS engine classes like Object and String by writing Object.prototype.someNewAttribute = ...
+  This is highly unadvisable and must not be done at all. Instead, inherit into a new class and modify the new class (prototype chaining)
+- Please look into [classical inheritance vs prototypal inheritance in javascript]
+
+--29--
+Solution to the Improvement Exercise of the Magic Notes Project
+- Simply create an additional form field and implement an array of objects to store (title,desc) type object in localStorage
+- Use JSON stringify and parse to convert to and from localStorage storable array string
+
+--30--
+Prototypal Inheritance
+- Older way of doing things
+- Good to know but not terribly important now since the advent of ES6 classes (--31--)
+- Very quirky and tricky to navigate this type of inheritance.
+- Please see : https://codewithharry.com/videos/javascript-tutorials-in-hindi-30/
+
+--31--

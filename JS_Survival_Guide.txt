@@ -368,3 +368,11 @@ Prototypal Inheritance
 - Please see : https://codewithharry.com/videos/javascript-tutorials-in-hindi-30/
 
 --31--
+ES6 JS classes
+- class definition and constructor which uses this keyword
+- attributes and method definition in the context of a class
+- instatiating an object of a class
+- static methods in a class and how to call them without creating an object
+- Inheritance using extends keyword and the user of super() keyword
+
+--32--
